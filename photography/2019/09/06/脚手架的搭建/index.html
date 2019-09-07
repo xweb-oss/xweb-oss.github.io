@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>脚手架的搭建 | 嗯哼Blog</title>
+    <meta name="description" content="This is a blog example built by VuePress">
+    <link rel="icon" href="../img/xxx.jpg">
+    
+    <link rel="preload" href="/assets/css/0.styles.0741b0e1.css" as="style"><link rel="preload" href="/assets/js/app.f86cd2f9.js" as="script"><link rel="preload" href="/assets/js/3.0cd5322b.js" as="script"><link rel="preload" href="/assets/js/5.2da9e9a6.js" as="script"><link rel="preload" href="/assets/js/6.33dc552f.js" as="script"><link rel="prefetch" href="/assets/js/10.694ed62f.js"><link rel="prefetch" href="/assets/js/11.5b50f574.js"><link rel="prefetch" href="/assets/js/12.4d09ef1f.js"><link rel="prefetch" href="/assets/js/13.c6a82a0c.js"><link rel="prefetch" href="/assets/js/14.c1c6f8a5.js"><link rel="prefetch" href="/assets/js/15.774b47bc.js"><link rel="prefetch" href="/assets/js/16.ad8860ab.js"><link rel="prefetch" href="/assets/js/17.3164ca54.js"><link rel="prefetch" href="/assets/js/18.c8723dfa.js"><link rel="prefetch" href="/assets/js/19.aadb8866.js"><link rel="prefetch" href="/assets/js/20.ee63456e.js"><link rel="prefetch" href="/assets/js/4.340dbe01.js"><link rel="prefetch" href="/assets/js/7.4f5ff954.js"><link rel="prefetch" href="/assets/js/8.57290989.js"><link rel="prefetch" href="/assets/js/9.a5bc302f.js"><link rel="prefetch" href="/assets/js/vuejs-paginate.98c54532.js">
+    <link rel="stylesheet" href="/assets/css/0.styles.0741b0e1.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div id="vuperess-theme-blog__global-layout"><section id="header-wrapper"><header id="header"><div class="header-wrapper"><div class="title"><a href="/" class="nav-link home-link">嗯哼Blog
+        </a></div> <div class="header-right-wrap"><ul class="nav"><li class="nav-item"><a href="/2019/09/05/posts/" class="nav-link">Blog</a></li><li class="nav-item"><a href="/photography/" class="nav-link router-link-active">前端基础</a></li><li class="nav-item"><a href="/about/2019/09/04/about/" class="nav-link">关于</a></li><li class="nav-item"><a href="https://github.com/xweb-oss" target="_blank" rel="noopener noreferrer" class="nav-link external">Github</a></li><li class="nav-item"><a href="https://gitee.com/wangchengzhu/dashboard" target="_blank" rel="noopener noreferrer" class="nav-link external">Gitee</a></li></ul> <div class="search-box"><input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div></div></div></header> <div id="mobile-header"><div class="mobile-header-bar"><div class="mobile-header-title"><a href="/" class="nav-link mobile-home-link">嗯哼Blog
+      </a> <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-menu"><line x1="3" y1="12" x2="21" y2="12"></line><line x1="3" y1="6" x2="21" y2="6"></line><line x1="3" y1="18" x2="21" y2="18"></line></svg></div> <div class="mobile-menu-wrapper"><hr class="menu-divider"> <ul class="mobile-nav"><li class="mobile-nav-item"><a href="/2019/09/05/posts/" class="nav-link">Blog</a></li><li class="mobile-nav-item"><a href="/photography/" class="nav-link router-link-active">前端基础</a></li><li class="mobile-nav-item"><a href="/about/2019/09/04/about/" class="nav-link">关于</a></li><li class="mobile-nav-item"><a href="https://github.com/xweb-oss" target="_blank" rel="noopener noreferrer" class="nav-link external">Github</a></li><li class="mobile-nav-item"><a href="https://gitee.com/wangchengzhu/dashboard" target="_blank" rel="noopener noreferrer" class="nav-link external">Gitee</a></li></ul></div></div></div></section> <div class="content-wrapper"><div id="vuperess-theme-blog__post-layout"><div class="vuepress-blog-theme-content content__default"><h1 id="脚手架的搭建"><a href="#脚手架的搭建" aria-hidden="true" class="header-anchor">#</a> 脚手架的搭建</h1> <h3 id="一、介绍"><a href="#一、介绍" aria-hidden="true" class="header-anchor">#</a> 一、介绍</h3> <h5 id="vue-cli-是一个基于-vue-js-进行快速开发的完整系统。有三个组件："><a href="#vue-cli-是一个基于-vue-js-进行快速开发的完整系统。有三个组件：" aria-hidden="true" class="header-anchor">#</a> Vue CLI 是一个基于 Vue.js 进行快速开发的完整系统。有三个组件：</h5> <ol><li><p>CLI：@vue/cli 全局安装的 npm 包，提供了终端里的vue命令（如：vue create 、vue serve 、vue ui 等命令）</p></li> <li><p>CLI 服务：@vue/cli-service是一个开发环境依赖。构建于 webpack 和 webpack-dev-server 之上（提供 如：serve、build 和 inspect 命令）</p></li> <li><p>CLI 插件：给Vue 项目提供可选功能的 npm 包 （如： Babel/TypeScript 转译、ESLint 集成、unit和 e2e测试 等）</p></li></ol> <h3 id="二、安装"><a href="#二、安装" aria-hidden="true" class="header-anchor">#</a> 二、安装</h3> <ol><li>全局安装过旧版本的 vue-cli(1.x 或 2.x)要先卸载它，否则跳过此步：</li></ol> <div class="language-js extra-class"><pre class="language-js"><code>npm uninstall vue<span class="token operator">-</span>cli <span class="token operator">-</span>g <span class="token comment">//或者 yarn global remove vue-cli</span>
+</code></pre></div><p>操作如下：</p> <p><img src="/assets/img/cli.ddffd4b0.jpg" alt="GitHub" title="GitHub,Social Coding"></p> <p>可以看到我之前的版本是2.9.6，卸载成功后，vue命令便不存在了</p> <blockquote><p>ps：npm WARN警告，可能是coffee-script 的某个依赖包改名了（coffee-script本身已经淘汰了）</p></blockquote> <ol start="2"><li>Vue CLI 3需要 nodeJs ≥ 8.9 (官方推荐 8.11.0+，你可以使用 nvm 或 nvm-windows在同一台电脑中管理多个 Node 版本）。<br>
+（1）查看node 版本</li></ol> <p><img src="/assets/img/cli2.fa470dfc.jpg" alt="GitHub" title="GitHub,Social Coding"></p> <p>（2）下载安装nodeJs很简单（和其他系统软件一样根据需求按步骤安装）这里不做介绍，中文官方下载地址：<a href="http://nodejs.cn/download/" target="_blank" rel="noopener noreferrer">node管官网<svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></p> <ol start="3"><li>安装@vue/cli（Vue CLI 3的包名称由 vue-cli 改成了 @vue/cli）</li></ol> <div class="language-js extra-class"><pre class="language-js"><code>cnpm install <span class="token operator">-</span>g @vue<span class="token operator">/</span>cli  <span class="token comment">//yarn global add @vue/cli</span>
+</code></pre></div><p>操作如下图：
+<img src="/assets/img/cli3.c8f5f4f1.jpg" alt="GitHub" title="GitHub,Social Coding"></p> <p>查看版本：</p> <div class="language-js extra-class"><pre class="language-js"><code>vue <span class="token operator">-</span><span class="token constant">V</span> <span class="token comment">//vue --version</span>
+</code></pre></div><p>结果如下图：
+<img src="/assets/img/cli4.d415af74.jpg" alt="GitHub" title="GitHub,Social Coding"></p> <h3 id="三、使用"><a href="#三、使用" aria-hidden="true" class="header-anchor">#</a> 三、使用</h3> <h5 id="_1、vue-create-搭建新项目"><a href="#_1、vue-create-搭建新项目" aria-hidden="true" class="header-anchor">#</a> 1、vue create 搭建新项目</h5> <p>（1）新建项目：
+*官方提示：如果你在 Windows 上通过 minTTY 使用 Git Bash，交互提示符并不工作，必须通过 winpty vue.cmd create hello-world 启动这个命令</p> <p><code>vue create &lt;Project Name&gt;</code>//文件名 不支持驼峰（含大写字母）
+具体操作如下：</p> <h6 id="首先，会提示你选择一个preset（预设）："><a href="#首先，会提示你选择一个preset（预设）：" aria-hidden="true" class="header-anchor">#</a> 首先，会提示你选择一个preset（预设）：</h6> <p>① 除最后两个，其他选项都是你此前保存的预设配置（如下图第一个“ preset-config”是我之前保存的预设配置，如今便可以直接用了）：
+<img src="/assets/img/cli5.b41b0a9e.jpg" alt="GitHub" title="GitHub,Social Coding"></p> <p>如果没有配置保存过，则只有以下两个选项：</p> <p>② default（babel，eslint）：默认设置（直接enter）非常适合快速创建一个新项目的原型，没有带任何辅助功能的 npm包</p> <p>③ Manually select features：手动配置（按方向键 ↓）是我们所需要的面向生产的项目，提供可选功能的 npm 包</p> <p><img src="/assets/img/cli6.494bb6f5.jpg" alt="GitHub" title="GitHub,Social Coding"></p> <p>手动配置，根据你需要用方向键选择（按 “空格键”选择/取消选择，A键全选/取消全选）对应功能
+<img src="/assets/img/cli7.599a8d7e.jpg" alt="GitHub" title="GitHub,Social Coding"></p> <p>简介：</p> <div class="language- extra-class"><pre class="language-text"><code>? Check the features needed for your project: (Press &lt;space&gt; to select, &lt;a&gt; to toggle all, &lt;i&gt; to invert selection)
+&gt;( ) TypeScript                                 // JavaScript的一个超集（添加了可选的静态类型和基于类的面向对象编程：类型批注和编译时类型检查、类、接口、模块、lambda 函数）
+ ( ) Progressive Web App (PWA) Support          // 渐进式Web应用程序
+ ( ) Router                                     // vue-router（vue路由）
+ ( ) Vuex                                       // vuex（vue的状态管理模式）
+ ( ) CSS Pre-processors                         // CSS 预处理器（如：less、sass）
+ ( ) Linter / Formatter                         // 代码风格检查和格式化（如：ESlint）
+ ( ) Unit Testing                               // 单元测试（unit tests）
+ ( ) E2E Testing                                // e2e（end to end） 测试
+</code></pre></div><p>选择完后直接enter，然后会提示你选择对应功能的具体工具包，选择自己擅长或者使用广泛的（方便遇到问题时百度），
+简介如下：</p> <p>① 首先会让你选择是否使用history router：Vue-Router 利用了浏览器自身的hash 模式和 history 模式的特性来实现前端路由（通过调用浏览器提供的接口）</p> <p>hash： 浏览器url址栏 中的 # 符号（如这个 URL：http://www.abc.com/#/hello，hash 的值为“ #/hello”），hash 不被包括在 HTTP 请求中（对后端完全没有影响），因此改变 hash 不会重新加载页面</p> <p>history：利用了 HTML5 History Interface 中新增的 pushState() 和 replaceState() 方法（需要特定浏览器支持）</p> <p>② css预处理器：主要为css解决浏览器兼容、简化CSS代码 等问题（* Sass诞生于2007年，最早也是最成熟的一款CSS预处理器语言。）</p> <div class="language- extra-class"><pre class="language-text"><code>? Please pick a preset: Manually select features
+? Check the features needed for your project: Router, Vuex, CSS Pre-processors, Linter, Unit
+? Pick a CSS pre-processor (PostCSS, Autoprefixer and CSS Modules are supported by default):
+&gt; SCSS/SASS  //Sass安装需要Ruby环境，是在服务端处理的，SCSS 是 Sass3新语法（完全兼容 CSS3且继承Sass功能）
+  LESS       //Less最终会通过编译处理输出css到浏览器，Less 既可以在客户端上运行，也可在服务端运行 (借助 Node.js)
+  Stylus     //Stylus主要用来给Node项目进行CSS预处理支持，Stylus功能上更为强壮，和js联系更加紧密，可创建健壮的、动态的的CSS。
+③ ESLint：提供一个插件化的javascript代码检测工具
+
+? Pick a linter / formatter config: (Use arrow keys)
+&gt; ESLint with error prevention only
+  ESLint + Airbnb config
+  ESLint + Standard config
+  ESLint + Prettier         //使用较多
+  ④ 何时检测：
+
+? Pick additional lint features: (Press &lt;space&gt; to select, &lt;a&gt; to toggle all, &lt;i&gt; to invert selection)
+&gt;( ) Lint on save                    // 保存就检测
+ ( ) Lint and fix on commit          // fix和commit时候检查
+⑤ 单元测试 ：
+
+? Pick a unit testing solution: (Use arrow keys)
+&gt; Mocha + Chai  //mocha灵活,只提供简单的测试结构，如果需要其他功能需要添加其他库/插件完成。必须在全局环境中安装
+  Jest          //安装配置简单，容易上手。内置Istanbul，可以查看到测试覆盖率，相较于Mocha:配置简洁、测试代码简洁、易于和babel集成、内置丰富的expect
+⑥ 如何存放配置 ：
+
+? Where do you prefer placing config for Babel, PostCSS, ESLint, etc.? (Use arrow keys)
+&gt; In dedicated config files // 独立文件放置
+  In package.json // 放package.json里
+ ⑦ 是否保存本次配置（之后可以直接使用）：
+
+? Save this as a preset for future projects? (Y/n) // y:记录本次配置，然后需要你起个名; n：不记录本次配置
+</code></pre></div><p>（2）搭建完成：
+<img src="/assets/img/cli8.9a41d0da.jpg" alt="GitHub" title="GitHub,Social Coding"></p> <h4 id="项目结构如下："><a href="#项目结构如下：" aria-hidden="true" class="header-anchor">#</a> 项目结构如下：</h4> <p><img src="/assets/img/cli10.17f3e260.jpg" alt="GitHub" title="GitHub,Social Coding"> <img src="/assets/img/cli9.af2b8f4c.jpg" alt="GitHub" title="GitHub,Social Coding"></p> <h5 id="对比之前的项目包："><a href="#对比之前的项目包：" aria-hidden="true" class="header-anchor">#</a> 对比之前的项目包：</h5> <p><img src="/assets/img/cli11.a3452716.jpg" alt="GitHub" title="GitHub,Social Coding"></p> <h2 id="对比一下-，区别如下："><a href="#对比一下-，区别如下：" aria-hidden="true" class="header-anchor">#</a> 对比一下 ，区别如下：</h2> <h6 id="vuex（状态管理）："><a href="#vuex（状态管理）：" aria-hidden="true" class="header-anchor">#</a> vuex（状态管理）：</h6> <p>vue cli 2 中：vuex是搭建完成后自己npm install的，并不包括在搭建过程中。可以看到vue cli 2的vuex文件夹（store）又包含了三个js文件：action（存放一些调用外部API接口的异步执行的的方法，然后commit mutations改变mutations 数据）、index（初始化mutations 数据，是store的出口）、mutations（处理数据逻辑的同步执行的方法的集合，Vuex中store数据改变的唯一方法commit mutations）</p> <hr> <p>vue cli 3 中：vuex是包含在搭建过程供选择的预设。vue cli 3 中的只用一个store.js代替了原来的store文件夹中的三个js文件，eg：</p> <div class="language-js extra-class"><pre class="language-js"><code><span class="token keyword">import</span> Vue <span class="token keyword">from</span> <span class="token string">'vue'</span><span class="token punctuation">;</span>
+<span class="token keyword">import</span> Vuex <span class="token keyword">from</span> <span class="token string">'vuex'</span><span class="token punctuation">;</span>
+ 
+Vue<span class="token punctuation">.</span><span class="token function">use</span><span class="token punctuation">(</span>Vuex<span class="token punctuation">)</span><span class="token punctuation">;</span>
+ 
+<span class="token keyword">export</span> <span class="token keyword">default</span> <span class="token keyword">new</span> <span class="token class-name">Vuex<span class="token punctuation">.</span>Store</span><span class="token punctuation">(</span><span class="token punctuation">{</span>
+    state<span class="token punctuation">:</span> <span class="token punctuation">{</span>
+        <span class="token comment">// 初始化状态</span>
+        count<span class="token punctuation">:</span> <span class="token number">0</span>
+    <span class="token punctuation">}</span><span class="token punctuation">,</span>
+    mutations<span class="token punctuation">:</span> <span class="token punctuation">{</span>
+        <span class="token comment">// 处理状态</span>
+        <span class="token function">increment</span><span class="token punctuation">(</span><span class="token parameter">state<span class="token punctuation">,</span> payload</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+            state<span class="token punctuation">.</span>count <span class="token operator">+=</span> payload<span class="token punctuation">.</span>step
+        <span class="token punctuation">}</span>
+    <span class="token punctuation">}</span><span class="token punctuation">,</span>
+    actions<span class="token punctuation">:</span> <span class="token punctuation">{</span>
+        <span class="token comment">// 提交改变后的状态</span>
+        <span class="token function">increment</span> <span class="token punctuation">(</span><span class="token parameter">context</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+            context<span class="token punctuation">.</span><span class="token function">commit</span><span class="token punctuation">(</span><span class="token string">'increment'</span><span class="token punctuation">)</span>
+        <span class="token punctuation">}</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span>
+</code></pre></div><ol><li>router （路由）：</li></ol> <p><code>vue cli 2 ：“ router/index.js ”</code></p> <p><code>vue cli 3：“router.js”（用法和做的事都一样）</code></p> <ol start="2"><li>去掉 static  、 新增 public 文件夹</li></ol> <p><code>vue cli 2 ：static 是 webpack 默认存放静态资源的文件夹，打包时会直接复制一份到dist文件夹不会经过 webpack 编译</code></p> <hr> <p>vue cli 3  ：摒弃 static 新增了 public 。vue cli 3 中“静态资源”两种处理方式：</p> <p>经webpack 处理：在 JavaScript 被导入或在 template/CSS 中通过“相对路径”被引用的资源会被编译并压缩</p> <p>不经webpack 处理：放置在 public 目录下或通过绝对路径被引用的资源将会“直接被拷贝”一份，不做任何编译压缩处理</p> <ol start="3"><li>index.html ：</li></ol> <p><code>vue cli 2 ：“index.html ”</code></p> <p><code>vue cli 3 ：“public/index.html ”此模板会被 html-webpack-plugin 处理的</code></p> <ol start="4"><li><p>src/views：vue cli 3 的 src文件夹 新增 views文件夹 用来存放 “页面”，区分 components（组件）</p></li> <li><p>去掉 build（根据config中的配置来定义规则）、config（配置不同环境的参数）文件夹 ：</p></li></ol> <p>vue cli 3 中 ，这些配置 你可以通过 命令行参数、或 vue.config.js （在根目录 新建一个 vue.config.js 同名文件）里的 devServer 字段配置开发服务器</p> <ol start="6"><li><p>babel.config.js：配置Babel 。Vue CLI 使用了 Babel 7 中的新配置格式 babel.config.js。和 .babelrc 或 package.json 中的 babel 字段不同，这个配置文件不会使用基于文件位置的方案，而是会一致地运用到项目根目录以下的所有文件，包括 node_modules 内部的依赖。官方推荐在 Vue CLI 项目中始终使用 babel.config.js 取代其它格式。</p></li> <li><p>根目录的一些其他文件的改变：之前所有的配置文件都在vue create 搭建时preset预设 或者 后期可以通过 命令参数 、 vue.config.js 中配置</p></li></ol> <p>根据需要在根目录下新建 vue.config.js自行配置，eg：（简单配置，更多配置详情参见官网：https://cli.vuejs.org/zh/config/）</p> <div class="language- extra-class"><pre class="language-text"><code>module.exports = {
+    baseUrl: '/',// 部署应用时的根路径(默认'/'),也可用相对路径(存在使用限制)
+    outputDir: 'dist',// 运行时生成的生产环境构建文件的目录(默认''dist''，构建之前会被清除)
+    assetsDir: '',//放置生成的静态资源(s、css、img、fonts)的(相对于 outputDir 的)目录(默认'')
+    indexPath: 'index.html',//指定生成的 index.html 的输出路径(相对于 outputDir)也可以是一个绝对路径。
+    pages: {//pages 里配置的路径和文件名在你的文档目录必须存在 否则启动服务会报错
+        index: {//除了 entry 之外都是可选的
+            entry: 'src/index/main.js',// page 的入口,每个“page”应该有一个对应的 JavaScript 入口文件
+            template: 'public/index.html',// 模板来源
+            filename: 'index.html',// 在 dist/index.html 的输出
+            title: 'Index Page',// 当使用 title 选项时,在 template 中使用：&lt;title&gt;&lt;%= htmlWebpackPlugin.options.title %&gt;&lt;/title&gt;
+            chunks: ['chunk-vendors', 'chunk-common', 'index'] // 在这个页面中包含的块，默认情况下会包含,提取出来的通用 chunk 和 vendor chunk
+        },
+        subpage: 'src/subpage/main.js'//官方解释：当使用只有入口的字符串格式时,模板会被推导为'public/subpage.html',若找不到就回退到'public/index.html',输出文件名会被推导为'subpage.html'
+    },
+    lintOnSave: true,// 是否在保存的时候检查
+    productionSourceMap: true,// 生产环境是否生成 sourceMap 文件
+    css: {
+        extract: true,// 是否使用css分离插件 ExtractTextPlugin
+        sourceMap: false,// 开启 CSS source maps
+        loaderOptions: {},// css预设器配置项
+        modules: false// 启用 CSS modules for all css / pre-processor files.
+    },
+    devServer: {// 环境配置
+        host: 'localhost',
+        port: 8080,
+        https: false,
+        hotOnly: false,
+        open: true, //配置自动启动浏览器
+        proxy: {// 配置多个代理(配置一个 proxy: 'http://localhost:4000' )
+            '/api': {
+                target: '&lt;url&gt;',
+                ws: true,
+                changeOrigin: true
+            },
+            '/foo': {
+                target: '&lt;other_url&gt;'
+            }
+        }
+    },
+    pluginOptions: {// 第三方插件配置
+        // ...
+    }
+};
+
+</code></pre></div><h6 id="end-npm-run-serve-跑起来"><a href="#end-npm-run-serve-跑起来" aria-hidden="true" class="header-anchor">#</a> end. npm run serve 跑起来~</h6></div> <div class="sticker vuepress-toc"><div class="vuepress-toc-item vuepress-toc-h3 active"><a href="#一、介绍" title="一、介绍">一、介绍</a></div><div class="vuepress-toc-item vuepress-toc-h3"><a href="#二、安装" title="二、安装">二、安装</a></div><div class="vuepress-toc-item vuepress-toc-h3"><a href="#三、使用" title="三、使用">三、使用</a></div><div class="vuepress-toc-item vuepress-toc-h2"><a href="#对比一下-，区别如下：" title="对比一下 ，区别如下：">对比一下 ，区别如下：</a></div></div></div></div> <footer class="footer" data-v-0d113134><div class="footer-left-wrap" data-v-0d113134><ul class="contact" data-v-0d113134><li class="contact-item" data-v-0d113134><a href="https://github.com/xweb-oss" target="_blank" rel="noopener noreferrer" class="nav-link external" data-v-0d113134><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-github" data-v-0d113134><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22" data-v-0d113134></path></svg>
+          
+        </a></li><li class="contact-item" data-v-0d113134><a href="https://twitter.com/_ulivz" target="_blank" rel="noopener noreferrer" class="nav-link external" data-v-0d113134><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-twitter" data-v-0d113134><path d="M23 3a10.9 10.9 0 0 1-3.14 1.53 4.48 4.48 0 0 0-7.86 3v1A10.66 10.66 0 0 1 3 4s-4 9 5 13a11.64 11.64 0 0 1-7 2c9 5 20 0 20-11.5a4.5 4.5 0 0 0-.08-.83A7.72 7.72 0 0 0 23 3z" data-v-0d113134></path></svg>
+          
+        </a></li></ul></div> <div class="footer-right-wrap" data-v-0d113134><ul class="copyright" data-v-0d113134><li class="copyright-item" data-v-0d113134><a href="/photography/2019/09/06/%E8%84%9A%E6%89%8B%E6%9E%B6%E7%9A%84%E6%90%AD%E5%BB%BA/.html" class="nav-link" data-v-0d113134>生命不息 , 马杀鸡不停</a></li><li class="copyright-item" data-v-0d113134><a href="/photography/2019/09/06/%E8%84%9A%E6%89%8B%E6%9E%B6%E7%9A%84%E6%90%AD%E5%BB%BA/.html" class="nav-link" data-v-0d113134>人不狠,成不了大事</a></li></ul></div></footer></div><div class="global-ui"><!----><div class="reading-progress top" data-v-7681808f><div class="progress" data-v-7681808f></div></div></div></div>
+    <script src="/assets/js/app.f86cd2f9.js" defer></script><script src="/assets/js/3.0cd5322b.js" defer></script><script src="/assets/js/5.2da9e9a6.js" defer></script><script src="/assets/js/6.33dc552f.js" defer></script>
+  </body>
+</html>
