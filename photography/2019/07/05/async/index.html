@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>async/await | 汪先生的前端之路</title>
+    <meta name="description" content="This is a blog example built by VuePress">
+    <link rel="icon" href="../img/xxx.jpg">
+    
+    <link rel="preload" href="/assets/css/0.styles.7ce21a14.css" as="style"><link rel="preload" href="/assets/js/app.817cf35a.js" as="script"><link rel="preload" href="/assets/js/3.4e7febd7.js" as="script"><link rel="preload" href="/assets/js/5.617f7cc8.js" as="script"><link rel="preload" href="/assets/js/24.187cdf76.js" as="script"><link rel="prefetch" href="/assets/js/10.3f641e00.js"><link rel="prefetch" href="/assets/js/11.74c5cf58.js"><link rel="prefetch" href="/assets/js/12.45712be4.js"><link rel="prefetch" href="/assets/js/13.1bf968b0.js"><link rel="prefetch" href="/assets/js/14.93bd3e3b.js"><link rel="prefetch" href="/assets/js/15.219812f8.js"><link rel="prefetch" href="/assets/js/16.072beeef.js"><link rel="prefetch" href="/assets/js/17.dcb4f98f.js"><link rel="prefetch" href="/assets/js/18.09045aaf.js"><link rel="prefetch" href="/assets/js/19.ddafcd07.js"><link rel="prefetch" href="/assets/js/20.7035684f.js"><link rel="prefetch" href="/assets/js/21.746d4976.js"><link rel="prefetch" href="/assets/js/22.2d091323.js"><link rel="prefetch" href="/assets/js/23.b7e407ca.js"><link rel="prefetch" href="/assets/js/25.d8d70818.js"><link rel="prefetch" href="/assets/js/26.76ef3f1b.js"><link rel="prefetch" href="/assets/js/27.df005f7a.js"><link rel="prefetch" href="/assets/js/28.dc84797e.js"><link rel="prefetch" href="/assets/js/4.1f76b34f.js"><link rel="prefetch" href="/assets/js/6.d9b6f5a5.js"><link rel="prefetch" href="/assets/js/7.5cf258fd.js"><link rel="prefetch" href="/assets/js/8.f0c3f52c.js"><link rel="prefetch" href="/assets/js/9.2bb673c1.js"><link rel="prefetch" href="/assets/js/vuejs-paginate.6a4e08c4.js">
+    <link rel="stylesheet" href="/assets/css/0.styles.7ce21a14.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div id="vuperess-theme-blog__global-layout"><section id="header-wrapper"><header id="header"><div class="header-wrapper"><div class="title"><a href="/" class="nav-link home-link">汪先生的前端之路
+        </a></div> <div class="header-right-wrap"><ul class="nav"><li class="nav-item"><a href="/2019/09/03/posts/" class="nav-link">Blog</a></li><li class="nav-item"><a href="/photography/" class="nav-link router-link-active">Main</a></li><li class="nav-item"><a href="/about/2019/09/04/about/" class="nav-link">关于</a></li><li class="nav-item"><a href="https://github.com/xweb-oss" target="_blank" rel="noopener noreferrer" class="nav-link external">Github</a></li><li class="nav-item"><a href="https://gitee.com/wangchengzhu/dashboard" target="_blank" rel="noopener noreferrer" class="nav-link external">Gitee</a></li></ul> <div class="search-box"><input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div></div></div></header> <div id="mobile-header"><div class="mobile-header-bar"><div class="mobile-header-title"><a href="/" class="nav-link mobile-home-link">汪先生的前端之路
+      </a> <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-menu"><line x1="3" y1="12" x2="21" y2="12"></line><line x1="3" y1="6" x2="21" y2="6"></line><line x1="3" y1="18" x2="21" y2="18"></line></svg></div> <div class="mobile-menu-wrapper"><hr class="menu-divider"> <ul class="mobile-nav"><li class="mobile-nav-item"><a href="/2019/09/03/posts/" class="nav-link">Blog</a></li><li class="mobile-nav-item"><a href="/photography/" class="nav-link router-link-active">Main</a></li><li class="mobile-nav-item"><a href="/about/2019/09/04/about/" class="nav-link">关于</a></li><li class="mobile-nav-item"><a href="https://github.com/xweb-oss" target="_blank" rel="noopener noreferrer" class="nav-link external">Github</a></li><li class="mobile-nav-item"><a href="https://gitee.com/wangchengzhu/dashboard" target="_blank" rel="noopener noreferrer" class="nav-link external">Gitee</a></li></ul></div></div></div></section> <div class="content-wrapper"><div id="vuperess-theme-blog__post-layout"><div class="vuepress-blog-theme-content content__default"><h1 id="async-await"><a href="#async-await" aria-hidden="true" class="header-anchor">#</a> async/await</h1> <p><strong>概念</strong></p> <ol><li>因为async就是异步的意思， 异步函数也就意味着该函数的执行不会阻塞后面代码的执行。 写一个async 函数 ：</li></ol> <div class="language-js extra-class"><pre class="language-js"><code><span class="token keyword">async</span> <span class="token keyword">function</span> <span class="token function">timeout</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+
+  console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token string">'没有阻塞后面的代码运行!'</span><span class="token punctuation">)</span>
+
+   <span class="token keyword">return</span> <span class="token string">'hello world'</span>
+<span class="token punctuation">}</span>
+
+console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token function">timeout</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
+
+console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token string">'虽然在后面，但是我先执行'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+</code></pre></div><p>打开控制台 :</p> <p><code>Promise {&lt;resolved&gt;: ''hello world&quot;}</code></p> <p><code>虽然在后面，但是我先执行</code></p> <hr> <p><code>没有阻塞后面的代码运行!</code></p> <p><strong>async返回什么?</strong>
+2. 返回的是一个 promise 对象,如果要获取到promise 返回值，我们应该用then 方法， 继续修改代码</p> <div class="language-js extra-class"><pre class="language-js"><code><span class="token keyword">async</span> <span class="token keyword">function</span> <span class="token function">timeout</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">return</span> <span class="token string">'hello world'</span>
+<span class="token punctuation">}</span>
+
+<span class="token function">timeout</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">then</span><span class="token punctuation">(</span><span class="token parameter">result</span> <span class="token operator">=&gt;</span> <span class="token punctuation">{</span>
+    console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>result<span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span>
+
+console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token string">'虽然在后面，但是我先执行'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+</code></pre></div><p>控制台 :</p> <hr> <p><code>虽然在后面，但是我先执行</code> <code>hello world</code></p> <p><strong>当调用该函数时，内部会调用Promise.solve() 方法把它转化成一个promise 对象作为返回，但如果timeout 函数内部抛出错误呢？ 那么就会调用Promise.reject() 返回一个promise 对象</strong>
+3.</p> <div class="language-js extra-class"><pre class="language-js"><code><span class="token keyword">async</span> <span class="token keyword">function</span> <span class="token function">timeout</span><span class="token punctuation">(</span><span class="token parameter">flag</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+   <span class="token keyword">if</span> <span class="token punctuation">(</span>flag<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+       <span class="token keyword">return</span> <span class="token string">'hello world'</span>
+   <span class="token punctuation">}</span> <span class="token keyword">else</span> <span class="token punctuation">{</span>
+       <span class="token keyword">throw</span> <span class="token string">'my god, failure'</span>
+   <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token function">timeout</span><span class="token punctuation">(</span><span class="token boolean">true</span><span class="token punctuation">)</span><span class="token punctuation">)</span>  <span class="token comment">// 调用Promise.resolve() 返回promise 对象。</span>
+console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token function">timeout</span><span class="token punctuation">(</span><span class="token boolean">false</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">// 调用Promise.reject() 返回promise 对象</span>
+</code></pre></div><p>控制台 ：
+<code>Promise {&lt;resolved&gt;: &quot;hello world&quot;}</code> <code>Promise {&lt;rejected&gt;: &quot;my god, failure&quot;}</code></p> <ol start="4"><li>如果函数内部抛出错误， promise 对象有一个catch 方法进行捕获。</li></ol> <div class="language- extra-class"><pre class="language-text"><code>timeout(false).catch(err =&gt; {
+    console.log(err)
+})
+</code></pre></div><h6 id="await"><a href="#await" aria-hidden="true" class="header-anchor">#</a> await</h6> <p><strong>概念</strong>
+await是等待的意思，那么它等待什么呢，它后面跟着什么呢？其实它后面可以放任何表达式，不过我们更多的是放一个返回promise 对象的表达式。注意await 关键字只能放到async 函数里面</p> <div class="language-js extra-class"><pre class="language-js"><code><span class="token keyword">function</span> <span class="token function">doubleAfter2seconds</span><span class="token punctuation">(</span><span class="token parameter">num</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">return</span> <span class="token keyword">new</span> <span class="token class-name">Promise</span><span class="token punctuation">(</span><span class="token punctuation">(</span><span class="token parameter">resolve<span class="token punctuation">,</span> reject</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token punctuation">{</span>
+        <span class="token function">setTimeout</span><span class="token punctuation">(</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token punctuation">{</span>
+            <span class="token function">resolve</span><span class="token punctuation">(</span><span class="token number">2</span> <span class="token operator">*</span> num<span class="token punctuation">)</span>
+        <span class="token punctuation">}</span><span class="token punctuation">,</span> <span class="token number">2000</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span> <span class="token punctuation">)</span>
+<span class="token punctuation">}</span>
+
+
+
+<span class="token keyword">async</span> <span class="token keyword">function</span> <span class="token function">testResult</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  <span class="token comment">// 等待doubleAfter2seconds执行完，把结果赋给result，然后在执行console.log语句</span>
+    <span class="token keyword">let</span> result <span class="token operator">=</span> <span class="token keyword">await</span> <span class="token function">doubleAfter2seconds</span><span class="token punctuation">(</span><span class="token number">30</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>result<span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+
+现在调用testResult 函数
+<span class="token function">testResult</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+打开控制台，<span class="token number">2</span>s 之后，输出了<span class="token number">60.</span> 
+
+</code></pre></div><p>现在我们看看代码的执行过程，调用testResult 函数，它里面遇到了await, (await 表示等一下)，代码就暂停到这里，不再向下执行了，它等什么呢？等后面的promise对象执行完毕，然后拿到promise resolve 的值并进行返回，返回值拿到之后，它继续向下执行。具体到 我们的代码, 遇到await 之后，代码就暂停执行了， 等待doubleAfter2seconds(30) 执行完毕，doubleAfter2seconds(30) 返回的promise 开始执行，2秒 之后，promise resolve 了， 并返回了值为60， 这时await 才拿到返回值60， 然后赋值给result， 暂停结束，代码才开始继续执行，执行 console.log语句。</p></div> <!----></div></div> <footer class="footer" data-v-0d113134><div class="footer-left-wrap" data-v-0d113134><ul class="contact" data-v-0d113134><li class="contact-item" data-v-0d113134><a href="https://github.com/xweb-oss" target="_blank" rel="noopener noreferrer" class="nav-link external" data-v-0d113134><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-github" data-v-0d113134><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22" data-v-0d113134></path></svg>
+          
+        </a></li><li class="contact-item" data-v-0d113134><a href="https://twitter.com/_ulivz" target="_blank" rel="noopener noreferrer" class="nav-link external" data-v-0d113134><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-twitter" data-v-0d113134><path d="M23 3a10.9 10.9 0 0 1-3.14 1.53 4.48 4.48 0 0 0-7.86 3v1A10.66 10.66 0 0 1 3 4s-4 9 5 13a11.64 11.64 0 0 1-7 2c9 5 20 0 20-11.5a4.5 4.5 0 0 0-.08-.83A7.72 7.72 0 0 0 23 3z" data-v-0d113134></path></svg>
+          
+        </a></li></ul></div> <div class="footer-right-wrap" data-v-0d113134><ul class="copyright" data-v-0d113134><li class="copyright-item" data-v-0d113134><a href="/photography/2019/07/05/async/.html" class="nav-link" data-v-0d113134>生命不息 , 马杀鸡不停</a></li><li class="copyright-item" data-v-0d113134><a href="/photography/2019/07/05/async/.html" class="nav-link" data-v-0d113134>人不狠,成不了大事</a></li></ul></div></footer></div><div class="global-ui"><!----><div class="reading-progress top" data-v-7681808f><div class="progress" data-v-7681808f></div></div></div></div>
+    <script src="/assets/js/app.817cf35a.js" defer></script><script src="/assets/js/3.4e7febd7.js" defer></script><script src="/assets/js/5.617f7cc8.js" defer></script><script src="/assets/js/24.187cdf76.js" defer></script>
+  </body>
+</html>
